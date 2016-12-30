@@ -1,6 +1,12 @@
 package se.tarlinder.foodlog
 
+import se.tarlinder.foodlog.domain.Food
+
 class FoodlistController {
 
-    def index() { }
+    static scaffold = Food
+
+    def index() {
+        [food: Food.all.sort()]
+    }
 }
