@@ -1,0 +1,16 @@
+.top_spacing {
+    margin-top: 100px;
+}
+
+.text-holder {
+    width: 40%;
+}
+
+.number-holder {
+    width: 12%;
+}
+
+.calendar_cell {
+    font-size: 0.8em;
+    height: 5em;
+}
