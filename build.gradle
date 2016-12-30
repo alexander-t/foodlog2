@@ -13,7 +13,6 @@ buildscript {
 version "0.1"
 group "foodlog2"
 
-apply plugin:"eclipse"
 apply plugin:"idea"
 apply plugin:"war"
 apply plugin:"org.grails.grails-web"
@@ -51,10 +50,6 @@ dependencies {
     profile "org.grails.profiles:web"
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.11.6"
     runtime "com.h2database:h2"
-    testCompile "org.grails:grails-plugin-testing"
-    testCompile "org.grails.plugins:geb"
-    testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
-    testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
 }
 
 bootRun {
@@ -70,12 +65,14 @@ assets {
 task stage() {
     dependsOn clean, war
 }
+
 tasks.stage.doLast() {
     delete fileTree(dir: "build/distributions")
     delete fileTree(dir: "build/assetCompile")
     delete fileTree(dir: "build/distributions")
     delete fileTree(dir: "build/libs", exclude: "*.war")
 }
+
 war.mustRunAfter clean
 
 task copyToLib(type: Copy) {
