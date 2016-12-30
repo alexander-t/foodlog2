@@ -1,4 +1,4 @@
-package foodlog2
+package se.tarlinder.foodlog
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
