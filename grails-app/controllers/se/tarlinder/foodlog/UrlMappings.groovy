@@ -1,4 +1,4 @@
-package foodlog2
+package se.tarlinder.foodlog
 
 class UrlMappings {
 
