@@ -2,6 +2,8 @@ Thumbs.db
 .DS_Store
 .gradle
 build/
+classes/
+target/
 .idea
 *.iml
 *.ipr
