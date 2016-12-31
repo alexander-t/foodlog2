@@ -50,6 +50,7 @@ dependencies {
     profile "org.grails.profiles:web"
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.11.6"
     runtime "org.postgresql:postgresql:9.4.1212.jre7"
+    testCompile "org.grails:grails-plugin-testing"
 }
 
 bootRun {
