@@ -8,6 +8,9 @@ dataSource {
     username = uri.userInfo.split(":")[0]
     password = uri.userInfo.split(":")[1]
 
+    validationQuery = "select 1"
+    testOnBorrow = true
+    testWhileIdle = true
 }
 
 // environment specific settings
