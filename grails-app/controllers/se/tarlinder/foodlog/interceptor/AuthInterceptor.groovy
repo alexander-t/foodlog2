@@ -5,6 +5,7 @@ class AuthInterceptor {
 
     AuthInterceptor() {
         match(controller: 'calendar')
+        match(controller: 'day')
     }
 
     boolean before() {
