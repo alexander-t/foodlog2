@@ -1,12 +1,10 @@
 package se.tarlinder.foodlog
 
-import se.tarlinder.foodlog.trait.IsLoggedIn
+import se.tarlinder.foodlog.model.Month
 
-class CalendarController implements IsLoggedIn {
-
-    def beforeInterceptor = [action: isLoggedIn()]
+class CalendarController {
 
     def index() {
-
+        [month: new Month(Calendar.getInstance(TimeZone.getTimeZone("GMT+1")))]
     }
 }
