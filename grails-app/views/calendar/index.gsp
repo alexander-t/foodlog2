@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <title>MatLoggen - Kalender</title>
-    <meta name="layout" content="foodlog" />
+    <meta name="layout" content="foodlog"/>
     <script>
         $(document).ready(function () {
             $('#nav_calendar').addClass("active");
@@ -39,17 +39,19 @@
                 <g:if test="${day != null}">
                     <g:set var="totals" value="${day.getTotals()}"/>
                     <div>Mat: ${totals.getTotalKcal(false)} kcal</div>
-                    ${CalendarViewHelper.intelligentProgressBar(totals.kcal, session.user.kcalPerDay)}
+                    <g:progressBar progress="${totals.kcal}" max="${session.user.kcalPerDay}"></g:progressBar>
                     <div>Träning: ${totals.totalWorkoutKcal} kcal</div>
-                    ${CalendarViewHelper.simpleProgressBar(totals.workoutKcal, session.user.kcalPerDay)}
+                    <g:progressBar progress="${totals.workoutKcal}" max="${session.user.kcalPerDay}"></g:progressBar>
                 </g:if>
                 <g:else>
                     <div>&nbsp;</div>
                 </g:else>
 
                 <div style="clear: both"></div>
-                <g:link class="label label-success" controller="day" params="[date:month.dates()[dayNumber]]">Mat</g:link>
-                <g:link class="label label-info" controller="training" params="[date:month.dates()[dayNumber]]">Träning</g:link>
+                <g:link class="label label-success" controller="day"
+                        params="[date: month.dates()[dayNumber]]">Mat</g:link>
+                <g:link class="label label-info" controller="training"
+                        params="[date: month.dates()[dayNumber]]">Träning</g:link>
                 <%--<a class="label label-warning" href="#">Data</a>--%>
             </div>
             </td>
