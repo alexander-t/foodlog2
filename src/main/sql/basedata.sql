@@ -70,6 +70,7 @@ INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, ca
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Fläsk (stekt)', NULL, 198, 26.7, 0, 10.1, 'MEAT', NULL);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Kabanoss - Classic', 'Morliny', 356, 22.6, 0.5, 29.3, 'MEAT', 30);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Prinskorv', 'Wurst Master', 250, 13, 5, 19, 'MEAT', 270);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Prinskorv med tunt skinn', 'Scan', 260, 10, 4, 23, 'MEAT', 600);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Kebabkött - djupfryst', NULL, 241, 14.3, 2.9, 18.6, 'MEAT', NULL);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Nötfärs (10%)', NULL, 149, 20, 0, 7.6, 'MEAT', 300);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Pepparbiff (stekt)', NULL, 148, 26.4, 0, 4.7, 'MEAT', 300);
@@ -166,6 +167,7 @@ INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, ca
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Vegobullar', 'Anamma', 182, 13, 2.2, 9.5, 'OTHER', 300);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Vegoburgare', 'Anamma', 181, 13, 2, 9.4, 'OTHER', 100);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Lättglass vanilj (500ml = 240g)', 'GB', 120, 5, 11, 5, 'OTHER', 240);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Morot (liten ~80g, jätte ~200g)', NULL, 36.4, 0.7, 6.6, 0.24, 'GREENS', 100);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodycombat', 800);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodypump', 600);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Zumba', 650);
