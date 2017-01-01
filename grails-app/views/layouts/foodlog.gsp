@@ -40,7 +40,7 @@
         <li id="nav_home"><g:link uri="/">Hem</g:link></li>
         <li id="nav_calendar"><g:link controller="calendar">Kalender</g:link></li>
         <li id="nav_foodlist"><g:link controller="foodlist">Livsmedelslista</g:link></li>
-        <li><a href="http://www.slv.se/ldb" target="_blank">Livsmedelsdatabasen</a></li>
+        <li><a href="http://www7.slv.se/SokNaringsinnehall" target="_blank">Livsmedelsdatabasen</a></li>
     </ul>
     <g:layoutBody/>
 </div>
