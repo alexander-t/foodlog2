@@ -21,23 +21,23 @@ class DayTotals {
         workoutKcal += workout.usedKcal;
     }
 
-    def String getTotalKcal(includeDecimal = true) {
+     String getTotalKcal(includeDecimal = true) {
         includeDecimal ? String.format("%.1f", kcal) : String.format("%.0f", kcal)
     }
 
-    def String getTotalProtein(includeDecimal = true) {
+    String getTotalProtein(includeDecimal = true) {
         String.format("%.1f", protein)
     }
 
-    def String getTotalCarbohydrate(includeDecimal = true) {
+    String getTotalCarbohydrate(includeDecimal = true) {
         String.format("%.1f", carbohydrate)
     }
 
-    def String getTotalFat(includeDecimal = true) {
+    String getTotalFat(includeDecimal = true) {
         String.format("%.1f", fat)
     }
 
-    def String getTotalWorkoutKcal() {
+    String getTotalWorkoutKcal() {
         "" + workoutKcal
     }
 }
