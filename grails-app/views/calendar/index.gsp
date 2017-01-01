@@ -39,9 +39,9 @@
                 <g:if test="${day != null}">
                     <g:set var="totals" value="${day.getTotals()}"/>
                     <div>Mat: ${totals.getTotalKcal(false)} kcal</div>
-                    <g:progressBar progress="${totals.kcal}" max="${session.user.kcalPerDay}"></g:progressBar>
+                    <fl:progressBar progress="${totals.kcal}" max="${session.user.kcalPerDay}"></fl:progressBar>
                     <div>Träning: ${totals.totalWorkoutKcal} kcal</div>
-                    <g:progressBar progress="${totals.workoutKcal}" max="${session.user.kcalPerDay}"></g:progressBar>
+                    <fl:progressBar progress="${totals.workoutKcal}" max="${session.user.kcalPerDay}"></fl:progressBar>
                 </g:if>
                 <g:else>
                     <div>&nbsp;</div>
