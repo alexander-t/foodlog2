@@ -11,28 +11,35 @@
 </head>
 
 <body>
-
-<div class="row top_spacing">
-    <div class="span3">&nbsp;</div>
-
-    <div class="span6">
-        <div class="hero-unit">
-
-            <g:form controller="login" action="login" class="form-inline">
-                <div class="row">
-                    <div><label for="u">Användarnamn</label></div>
-                    <div><input type="text" name="u" id="u"></div>
+<div class="container">
+    <div class="row" style="padding-top: 2em;">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Login</h3>
                 </div>
 
-                <div class="row">
-                    <div><label for="p">Lösenord</label></div>
-                    <div><input type="password" name="p" id="p">&nbsp;
-                        <button type="submit" class="btn btn-primary">Logga in</button></div>
+                <div class="panel panel-body">
+                    <g:form controller="login" action="login">
+                        <div class="form-group">
+                            <label for="u">Användarnamn</label>
+                            <input type="text" name="u" id="u" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="p">Lösenord</label>
+                            <input type="password" name="p" id="p" class="form-control">
+                        </div>
+
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-primary">Logga in</button>
+                        </div>
+                    </g:form>
                 </div>
-            </g:form>
+            </div>
         </div>
     </div>
-    <div class="span3">&nbsp;</div>
 </div>
+
 </body>
 </html>
