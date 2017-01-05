@@ -1,5 +1,12 @@
-.top_spacing {
-    margin-top: 100px;
+/* Layout */
+div.top_background {
+    background: #08a0ff;
+    width: 100%;
+}
+
+/* Pages */
+.page_offset {
+    padding: 10px;
 }
 
 th.text-holder {
