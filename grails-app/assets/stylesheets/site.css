@@ -2,11 +2,11 @@
     margin-top: 100px;
 }
 
-.text-holder {
+th.text-holder {
     width: 40%;
 }
 
-.number-holder {
+th.number-holder {
     width: 12%;
 }
 
