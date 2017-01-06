@@ -9,11 +9,15 @@ div.top_background {
     padding: 10px;
 }
 
-th.text-holder {
+.bottom10 {
+    margin-bottom: 10px;
+}
+
+.text-holder {
     width: 40%;
 }
 
-th.number-holder {
+.number-holder {
     width: 12%;
 }
 

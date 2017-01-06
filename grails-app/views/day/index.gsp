@@ -47,11 +47,21 @@
 <h2>Kostdagbok (${TimeUtil.prettyPrint(day.date)})</h2>
 
 <g:form controller="day" action="add" class="form-inline">
-    <g:select class="text-holder" name="foodId" from="${food}" optionKey="id"
-              optionValue="${{it.getNameWithPortionSize()}}"></g:select>
     <g:hiddenField name="date" value="${day.date}"/>
-    <input type="text" id="portionSize" name="portionSize" value="100" class="number-holder">
-    <button type="submit" class="btn btn-primary">Lägg till&nbsp;<i class="icon-arrow-down icon-white"></i></button>
+    <div class="form-group">
+        <label class="sr-only" for="foodId">Mat</label>
+        <g:select class="form-control bottom10" id="foodId" name="foodId" from="${food}" optionKey="id"
+                  optionValue="${{ it.getNameWithPortionSize() }}"/>
+    </div>
+
+    <div class="form-group">
+        <label class="sr-only" for="portionSize">Portionsstorlek</label>
+        <input type="text" id="portionSize" name="portionSize" value="100" class="form-control bottom10">
+    </div>
+    <button type="submit" class="btn btn-primary bottom10">
+        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>Lägg till
+    </button>
+
 </g:form>
 
 <table class="tablesorter table table-bordered table-striped">
