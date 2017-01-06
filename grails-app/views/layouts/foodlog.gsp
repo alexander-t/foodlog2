@@ -33,7 +33,9 @@
         <li id="nav_foodlist"><g:link controller="foodlist">Livsmedelslista</g:link></li>
         <li><a href="http://www7.slv.se/SokNaringsinnehall" target="_blank">Livsmedelsdatabasen</a></li>
     </ul>
-    <g:layoutBody/>
+    <div class="page_offset">
+        <g:layoutBody/>
+    </div>
 </div>
 </body>
 </html>
