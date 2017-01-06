@@ -9,14 +9,12 @@
     th.headerSortUp {
         background-image: url(${resource(dir: 'img', file: 'arrow_up.png')});
         background-repeat: no-repeat;
-        background-origin: content;
         background-position: center right;
     }
 
     th.headerSortDown {
         background-image: url(${resource(dir: 'img', file: 'arrow_down.png')});
         background-repeat: no-repeat;
-        background-origin: content;
         background-position: center right;
     }
     </style>
