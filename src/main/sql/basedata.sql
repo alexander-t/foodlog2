@@ -175,6 +175,8 @@ INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, ca
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Ölkorv (Hot Amigo)', 'Ridderheims', 480, 29, 2.4, 38, 'MEAT', 50);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Protein Bar Coconut', 'Nutramino', 439, 31, 33, 21, 'BAR', 66);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Korv - Sorunda Chorizo (1 korv=120g)', 'Sorunda korvfabrik', 240, 15, 6, 17, 'MEAT', 600);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Krossade tomater', 'ICA', 20, 0.8, 3.7, 0.5, 'GREENS', 500);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Gräddglass - gammaldags vanilj ', 'GB', 117, 18, 4, 16, 'SWEETS', 250);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodycombat', 800);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodypump', 600);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Zumba', 650);
