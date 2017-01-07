@@ -42,7 +42,7 @@
 </head>
 
 <body>
-<h2>Kostdagbok (${TimeUtil.prettyPrint(day.date)})</h2>
+<h2>Kostdagbok <small>(${TimeUtil.prettyPrint(day.date)})</small></h2>
 
 <g:form controller="day" action="add" class="form-inline">
     <g:hiddenField name="date" value="${day.date}"/>
@@ -52,10 +52,11 @@
                   optionValue="${{ it.getNameWithPortionSize() }}"/>
     </div>
 
-    <div class="form-group">
-        <label class="sr-only" for="portionSize">Portionsstorlek</label>
-        <input type="text" id="portionSize" name="portionSize" value="100" class="form-control bottom10">
+    <div class="input-group bottom10">
+        <input type="text" id="portionSize" name="portionSize" value="100" class="form-control" aria-describedby="gram-addon">
+        <span class="input-group-addon" id="gram-addon">g</span>
     </div>
+
     <button type="submit" class="btn btn-primary bottom10">
         <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>Lägg till
     </button>
