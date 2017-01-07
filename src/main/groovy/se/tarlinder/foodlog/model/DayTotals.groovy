@@ -18,10 +18,10 @@ class DayTotals {
     }
 
     def addWorkout(Workout workout) {
-        workoutKcal += workout.usedKcal;
+        workoutKcal += workout.usedKcal
     }
 
-     String getTotalKcal(includeDecimal = true) {
+    String getTotalKcal(includeDecimal = true) {
         includeDecimal ? String.format("%.1f", kcal) : String.format("%.0f", kcal)
     }
 
@@ -39,5 +39,13 @@ class DayTotals {
 
     String getTotalWorkoutKcal() {
         "" + workoutKcal
+    }
+
+    String getNetKcal() {
+        String.format("%.0f", kcal - workoutKcal)
+    }
+
+    boolean isEmpty() {
+        kcal == 0.0 && workoutKcal == 0
     }
 }
