@@ -11,10 +11,6 @@ class TimeUtil {
         sdf.setLenient(false)
     }
 
-    static isToday(dateAsString) {
-        return dateAsString.equals(sdf.format(new Date()))
-    }
-
     static parseStandardDate(String dateParameter) {
         if (dateParameter == null || !dateParameter.matches('^\\d{8}$')) {
             throw new IllegalArgumentException("Expected a date with format yyyyMMdd")

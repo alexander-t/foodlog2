@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@ page import="se.tarlinder.foodlog.util.CalendarViewHelper; se.tarlinder.foodlog.domain.Day; se.tarlinder.foodlog.util.TimeUtil" %>
+<%@ page import="se.tarlinder.foodlog.domain.Day; se.tarlinder.foodlog.util.TimeUtil" %>
 <html lang="en">
 <head>
     <title>MatLoggen - Kalender</title>
@@ -16,25 +16,17 @@
 <h2>${month.name()}</h2>
 <table class="table table-bordered">
     <tbody>
-
-    <g:each in="${0..34}" var="dayNumber">
+    <g:set var="dayIndex" value="${0}"/>
+    <g:each var="date" in="${month.dates()}">
     <%-- Start row --%>
-        <g:if test="${dayNumber % 7 == 0}">
+        <g:if test="${dayIndex % 7 == 0}">
             <tr>
         </g:if>
 
-    <%-- Highlight current day --%>
-        <g:if test="${dayNumber < month.dates().size() && TimeUtil.isToday(month.dates()[dayNumber])}">
-            <td class="calendar_cell" style="background: #B8EAFF">
-        </g:if>
-        <g:else>
-            <td class="calendar_cell">
-        </g:else>
-
-    <%-- Print current day--%>
-        <g:if test="${dayNumber < month.dates().size()}">
-            <b>${dayNumber + 1}</b>
-            <g:set var="currentDay" value="${month.dates()[dayNumber]}"/>
+    <%-- Highlight current dayIndex --%>
+        <td class="calendar_cell ${date == today ? 'today' : ''}">
+            <p>${TimeUtil.prettyPrint(date)}</p>
+            <g:set var="currentDay" value="${month.dates()[dayIndex]}"/>
             <div style="height: 100%; bottom: 0;">
                 <g:set var="day" value="${Day.findByDateAndUser(currentDay, session.user)}"/>
                 <g:if test="${day != null}">
@@ -47,28 +39,28 @@
                 <fl:progressBar progress="${totals.getNetKcal()}" max="${session.user.kcalPerDay}"/>
                 <div class="text-center">
                     <g:if test="${!totals.isEmpty()}">
-                        <p class="h3">${totals.getNetKcal()} kcal</p>
+                        <p class="h4">${totals.getNetKcal()} kcal</p>
                         <g:link class=" label label-success" controller="day"
-                                params="[date: month.dates()[dayNumber]]">Mat (${totals.getTotalKcal(false)})</g:link>
+                                params="[date: month.dates()[dayIndex]]">Mat (${totals.getTotalKcal(false)})</g:link>
                         <g:link class="label label-info" controller="training"
-                                params="[date: month.dates()[dayNumber]]">Träning (${totals.totalWorkoutKcal})</g:link>
+                                params="[date: month.dates()[dayIndex]]">Träning (${totals.totalWorkoutKcal})</g:link>
                     </g:if>
                     <g:else>
-                        <p class="h3">&nbsp;</p>
+                        <p class="h4">&nbsp;</p>
                         <g:link class=" label label-success" controller="day"
-                                params="[date: month.dates()[dayNumber]]">Mat</g:link>
+                                params="[date: month.dates()[dayIndex]]">Mat</g:link>
                         <g:link class="label label-info" controller="training"
-                                params="[date: month.dates()[dayNumber]]">Träning</g:link>
+                                params="[date: month.dates()[dayIndex]]">Träning</g:link>
                     </g:else>
-                    <%--<g:link class="label label-warning" controller="data">Data</g:link>--%>
+                <%--<g:link class="label label-warning" controller="data">Data</g:link>--%>
                 </div>
             </div>
-            </td>
-        </g:if>
 
-    <%--End row --%>
-        <g:if test="${(dayNumber + 1) % 7 == 0}">
-            </tr>
+        </td>
+
+    <%-- End row --%>
+        <g:if test="${++dayIndex % 7 == 0}">
+            <tr>
         </g:if>
     </g:each>
     </tbody>
