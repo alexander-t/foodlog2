@@ -24,13 +24,20 @@
 </head>
 
 <body>
-<h2>Träning (${TimeUtil.prettyPrint(date)})</h2>
+<h2>Träning <small>(${TimeUtil.prettyPrint(date)})</small></h2>
 <g:form controller="training" action="add" class="form-inline">
-    <g:select name="workoutTypeId" from="${workoutTypes}" optionKey="id"
+    <g:hiddenField name="date" value="${date}"/>
+    <g:select name="workoutTypeId" class="form-control bottom10" from="${workoutTypes}" optionKey="id"
               optionValue="${{it.name + " (" + it.averageKcal + "kcal)"}}"></g:select>
-    <g:hiddenField name="date" value="${date}"></g:hiddenField>
-    <input type="text" id="usedKcal" name="usedKcal" maxlength="4" style="width: 100px" value="">
-    <input type="submit" value="Lägg till" class="btn btn-primary">
+
+    <div class="input-group bottom10">
+        <input type="text" id="usedKcal" name="usedKcal" placeHolder="kcal" class="form-control" aria-describedby="kcal-addon">
+        <span class="input-group-addon" id="kcal-addon">kcal</span>
+    </div>
+
+    <button type="submit" class="btn btn-primary bottom10">
+        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>Lägg till
+    </button>
 </g:form>
 
 <table class="table table-bordered">
