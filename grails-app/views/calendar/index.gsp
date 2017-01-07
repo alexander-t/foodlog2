@@ -39,21 +39,29 @@
                 <g:set var="day" value="${Day.findByDateAndUser(currentDay, session.user)}"/>
                 <g:if test="${day != null}">
                     <g:set var="totals" value="${day.getTotals()}"/>
-                    <div>Mat: ${totals.getTotalKcal(false)} kcal</div>
-                    <fl:progressBar progress="${totals.kcal}" max="${session.user.kcalPerDay}"/>
-                    <div>Träning: ${totals.totalWorkoutKcal} kcal</div>
-                    <fl:progressBar progress="${totals.workoutKcal}" max="${session.user.kcalPerDay}"/>
                 </g:if>
                 <g:else>
-                    <div>&nbsp;</div>
+                    <g:set var="totals" value="${new se.tarlinder.foodlog.model.DayTotals()}"/>
                 </g:else>
 
-                <div style="clear: both"></div>
-                <g:link class="label label-success" controller="day"
-                        params="[date: month.dates()[dayNumber]]">Mat</g:link>
-                <g:link class="label label-info" controller="training"
-                        params="[date: month.dates()[dayNumber]]">Träning</g:link>
-                <%--<a class="label label-warning" href="#">Data</a>--%>
+                <fl:progressBar progress="${totals.getNetKcal()}" max="${session.user.kcalPerDay}"/>
+                <div class="text-center">
+                    <g:if test="${!totals.isEmpty()}">
+                        <p class="h3">${totals.getNetKcal()} kcal</p>
+                        <g:link class=" label label-success" controller="day"
+                                params="[date: month.dates()[dayNumber]]">Mat (${totals.getTotalKcal(false)})</g:link>
+                        <g:link class="label label-info" controller="training"
+                                params="[date: month.dates()[dayNumber]]">Träning (${totals.totalWorkoutKcal})</g:link>
+                    </g:if>
+                    <g:else>
+                        <p class="h3">&nbsp;</p>
+                        <g:link class=" label label-success" controller="day"
+                                params="[date: month.dates()[dayNumber]]">Mat</g:link>
+                        <g:link class="label label-info" controller="training"
+                                params="[date: month.dates()[dayNumber]]">Träning</g:link>
+                    </g:else>
+                    <%--<g:link class="label label-warning" controller="data">Data</g:link>--%>
+                </div>
             </div>
             </td>
         </g:if>
