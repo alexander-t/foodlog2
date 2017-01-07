@@ -28,6 +28,24 @@ class ProgressBarTagLibSpec extends Specification {
         html =~ /style="width:\s?33%/
     }
 
+    void "A progress bar with progress < 100 is green"() {
+        given:
+        def html = applyTemplate('<fl:progressBar progress="99"/>')
+
+        expect:
+        html =~ /aria-valuemin="0"/
+        html =~ /class=".*progress-bar-success.*?"/
+    }
+
+    void "A progress bar with progress = 100 is red"() {
+        given:
+        def html = applyTemplate('<fl:progressBar progress="100"/>')
+
+        expect:
+        html =~ /aria-valuemin="0"/
+        html =~ /class=".*progress-bar-danger.*?"/
+    }
+
     void 'Taglib string arguments are supported'() {
         expect: "Progress to be 10/50 = 20"
         tagLib.progressBar([progress: "10", max: "50"]) =~ /aria-valuenow="20"/
