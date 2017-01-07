@@ -53,6 +53,7 @@
     </div>
 
     <div class="input-group bottom10">
+        <label class="sr-only" for="portionSize">Portionsstorlek</label>
         <input type="text" id="portionSize" name="portionSize" value="100" class="form-control" aria-describedby="gram-addon">
         <span class="input-group-addon" id="gram-addon">g</span>
     </div>
