@@ -25,3 +25,7 @@ div.top_background {
     font-size: 0.8em;
     height: 5em;
 }
+
+td.today {
+    background: #B8EAFF;
+}
