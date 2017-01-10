@@ -30,9 +30,10 @@
     <ul class="nav nav-tabs">
         <li id="nav_home"><g:link uri="/">Hem</g:link></li>
         <li id="nav_calendar"><g:link controller="calendar">Kalender</g:link></li>
-        <li id="nav_foodlist"><g:link controller="foodlist">Livsmedelslista</g:link></li>
         <li id="nav_stats"><g:link controller="stats">Statistik och Data</g:link></li>
+        <li id="nav_foodlist"><g:link controller="foodlist">Livsmedelslista</g:link></li>
         <li><a href="http://www7.slv.se/SokNaringsinnehall" target="_blank">Livsmedelsdatabasen</a></li>
+        <%--<li><a href="https://www.niddk.nih.gov/research-funding/at-niddk/labs-branches/LBM/integrative-physiology-section/research-behind-body-weight-planner/Pages/default.aspx">Research Behind the Body Weight Planner</a>--%>
     </ul>
     <div class="page_offset">
         <g:layoutBody/>
