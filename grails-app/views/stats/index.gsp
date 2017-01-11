@@ -12,13 +12,33 @@
 
 <body>
 <h2>Statistik och Data</h2>
-<h4>Energi in</h4>
-<p>Mat: ${foodKcal}</p>
-<h4>Energi ut</h4>
-<p>Energibalans: ${energyBalanceKcal}</p>
-<p>Träning: ${workoutKcal}</p>
-<h4>Totalt</h4>
-<p>${foodKcal - energyBalanceKcal - workoutKcal}</p>
-</body>
 
+<div class="row">
+    <div class="col-md-3">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Energi in/ut</th><th>kcal</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="danger">Mat</td><td class="danger">${stats.foodKcal}</td>
+            </tr>
+            <tr>
+                <td class="success">Energibalans</td><td class="success">${stats.energyBalanceKcal}</td>
+            </tr>
+            <tr>
+                <td class="success">Träning</td><td class="success">${stats.workoutKcal}</td>
+            </tr>
+            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr>
+                <td><strong>Totalt</strong></td>
+                <td>${stats.getKcalDiff()} (${stats.getKiloDiff()} kg)</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
 </html>
