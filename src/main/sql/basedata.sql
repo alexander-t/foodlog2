@@ -181,6 +181,9 @@ INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, ca
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Maxim Protein Boost', 'Maxim', 68, 10, 5.6, 0.4, 'OTHER', 480);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Couscous tillagad', NULL, 108.1, 3.8, 21.9, 0.2, 'OTHER', NULL);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Fläskfilé', 'Livsmedelsverket', 106.7, 20.6, 0, 2.6, 'MEAT', NULL);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Oliver med paprikafyllning', 'Livsmedelsverket', 127.8, 0.6, 1.1, 31.1, 'GREENS', NULL);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Lean Protein Shake (Vanilla)', 'Nutramino', 41, 7.6, 2.3, 0.2, 'SHAKE', 330);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Recovery - Apple Beetroot Ginger', 'Oatly', 80, 4.6, 13, 0.6, 'SHAKE', 235);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodycombat', 800);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodypump', 600);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Zumba', 650);
