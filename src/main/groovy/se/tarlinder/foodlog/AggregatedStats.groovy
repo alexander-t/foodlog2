@@ -4,6 +4,8 @@ class AggregatedStats {
 
     def KCAL_IN_1_KG_FAT = 7700.0
 
+    int daysOnDiet
+
     int energyBalanceKcal
     int foodKcal
     int workoutKcal
