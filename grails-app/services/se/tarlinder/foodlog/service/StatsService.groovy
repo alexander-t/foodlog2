@@ -16,9 +16,9 @@ class StatsService {
         String unparsedRecord = ((PGobject) rows[0]["compute_total_stats"]).value.replaceAll(/[^\d,]/, "")
         def (energyBalanceKcal, foodKcal, workoutKcal) = unparsedRecord.split(/,/, -1)
         def aggregatedStats = new AggregatedStats()
-        aggregatedStats.energyBalanceKcal = Integer.parseInt(energyBalanceKcal)
-        aggregatedStats.foodKcal = foodKcal?.trim() ? Integer.parseInt(foodKcal) : 0
-        aggregatedStats.workoutKcal = workoutKcal?.trim() ? Integer.parseInt(workoutKcal) : 0
+        aggregatedStats.energyBalanceKcal = 2400 * Integer.parseInt(energyBalanceKcal)
+        aggregatedStats.foodKcal = Integer.parseInt(foodKcal)
+        aggregatedStats.workoutKcal = Integer.parseInt(workoutKcal)
         return aggregatedStats
     }
 }
