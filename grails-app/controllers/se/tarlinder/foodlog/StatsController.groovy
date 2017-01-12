@@ -7,6 +7,6 @@ class StatsController {
     StatsService statsService
 
     def index() {
-        [stats: statsService.computeAggregatedStats()]
+        [stats: statsService.computeAggregatedStats(session.user)]
     }
 }
