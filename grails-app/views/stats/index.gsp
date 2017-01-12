@@ -12,7 +12,7 @@
 
 <body>
 <h2>Statistik och Data</h2>
-
+<h3>${stats.daysOnDiet} dagar på diet</h3>
 <div class="row">
     <div class="col-md-3">
         <table class="table table-bordered">
