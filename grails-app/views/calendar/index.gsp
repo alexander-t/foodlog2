@@ -40,20 +40,16 @@
                 <div class="text-center">
                     <g:if test="${!totals.isEmpty()}">
                         <p class="h4">${totals.getNetKcal()} kcal</p>
-                        <g:link class=" label label-success" controller="day"
-                                params="[date: month.dates()[dayIndex]]">Mat (${totals.getTotalKcal(false)})</g:link>
-                        <g:link class="label label-info" controller="training"
-                                params="[date: month.dates()[dayIndex]]">Träning (${totals.totalWorkoutKcal})</g:link>
                     </g:if>
                     <g:else>
                         <p class="h4">&nbsp;</p>
-                        <g:link class=" label label-success" controller="day"
-                                params="[date: month.dates()[dayIndex]]">Mat</g:link>
-                        <g:link class="label label-info" controller="training"
-                                params="[date: month.dates()[dayIndex]]">Träning</g:link>
                     </g:else>
-                <g:link class="label label-warning" controller="datapoint"
-                        params="[date: month.dates()[dayIndex]]">Data</g:link>
+                    <g:link class=" label label-success" controller="day"
+                            params="[date: month.dates()[dayIndex]]">Kost</g:link>
+                    <g:link class="label label-info" controller="training"
+                            params="[date: month.dates()[dayIndex]]">Träning</g:link>
+                    <g:link class="label label-warning" controller="datapoint"
+                            params="[date: month.dates()[dayIndex]]">Data</g:link>
                 </div>
             </div>
 
