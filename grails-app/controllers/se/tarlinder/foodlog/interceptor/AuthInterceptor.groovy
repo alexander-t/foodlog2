@@ -7,6 +7,7 @@ class AuthInterceptor {
         match(controller: 'calendar')
         match(controller: 'day')
         match(controller: 'training')
+        match(controller: 'datapoint')
         match(controller: 'stats')
     }
 

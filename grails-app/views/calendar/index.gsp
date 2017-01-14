@@ -52,7 +52,8 @@
                         <g:link class="label label-info" controller="training"
                                 params="[date: month.dates()[dayIndex]]">Träning</g:link>
                     </g:else>
-                <%--<g:link class="label label-warning" controller="data">Data</g:link>--%>
+                <g:link class="label label-warning" controller="datapoint"
+                        params="[date: month.dates()[dayIndex]]">Data</g:link>
                 </div>
             </div>
 

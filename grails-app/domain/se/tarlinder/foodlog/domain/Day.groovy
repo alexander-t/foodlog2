@@ -8,7 +8,7 @@ class Day {
     String date
     User user
 
-    static hasMany = [meals: Meal, workouts: Workout]
+    static hasMany = [meals: Meal, workouts: Workout, dataPoints: DataPoint]
     static constraints = {
         id nullable: false
         date size: 8..8, nullable: false, unique: 'user'
