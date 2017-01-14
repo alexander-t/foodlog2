@@ -4,6 +4,7 @@ import grails.transaction.Transactional
 import groovy.sql.Sql
 import org.postgresql.util.PGobject
 import se.tarlinder.foodlog.AggregatedStats
+import se.tarlinder.foodlog.domain.DataPoint
 import se.tarlinder.foodlog.domain.User
 
 @Transactional
@@ -23,5 +24,11 @@ class StatsService {
         aggregatedStats.foodKcal = Integer.parseInt(foodKcal)
         aggregatedStats.workoutKcal = Integer.parseInt(workoutKcal)
         return aggregatedStats
+    }
+
+    List<DataPoint> getUserDataPoints(User user) {
+        DataPoint.executeQuery("SELECT dp FROM DataPoint dp JOIN dp.day d WHERE d.user=:user ORDER BY d.date ASC",
+                [user: user])
+
     }
 }
