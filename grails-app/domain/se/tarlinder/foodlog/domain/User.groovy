@@ -2,7 +2,7 @@ package se.tarlinder.foodlog.domain
 
 class User {
 
-    Long id
+    long id
     String name
     String password
     boolean admin = false
