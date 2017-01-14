@@ -7,6 +7,8 @@ class StatsController {
     StatsService statsService
 
     def index() {
-        [stats: statsService.computeAggregatedStats(session.user)]
+        def user = session.user
+        [stats         : statsService.computeAggregatedStats(user),
+         userDataPoints: statsService.getUserDataPoints(user)]
     }
 }
