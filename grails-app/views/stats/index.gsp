@@ -17,7 +17,9 @@
 <div class="row">
     <div class="col-md-3">
         <div class="panel panel-primary">
-            <div class="panel-heading"><strong>Sammanfattning</strong></div>
+            <div class="panel-heading">
+                <h3 class="panel-title">Sammanfattning</h3>
+            </div>
 
             <div class="panel-body">
                 <h4>${stats.daysOnDiet} dagar på diet</h4>
@@ -50,7 +52,9 @@
 
     <div class="col-md-5">
         <div class="panel panel-primary">
-            <div class="panel-heading"><strong>Mätpunkter</strong></div>
+            <div class="panel-heading">
+                <h3 class="panel-title">Mätpunkter</h3>
+            </div>
 
             <div class="panel-body">
                 <table class="table">
