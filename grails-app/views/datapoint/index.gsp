@@ -18,9 +18,7 @@
         <input type="text" id="value" name="value" class="form-control">
     </div>
 
-    <button type="submit" class="btn btn-primary bottom10">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Lägg till
-    </button>
+    <fl:addButton/>
 </g:form>
 
 <div class="row">

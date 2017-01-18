@@ -58,10 +58,7 @@
         <span class="input-group-addon" id="gram-addon">g</span>
     </div>
 
-    <button type="submit" class="btn btn-primary bottom10">
-        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>Lägg till
-    </button>
-
+    <fl:addButton/>
 </g:form>
 
 <table class="tablesorter table table-bordered table-striped">
