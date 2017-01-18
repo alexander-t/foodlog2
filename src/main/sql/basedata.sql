@@ -189,6 +189,10 @@ INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, ca
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Ölkorv Chili', 'Garant', 460, 25, 2, 39, 'MEAT', 40);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Pulled pork med BBQ sås', 'Garant', 160, 17, 4.5, 8.4, 'MEAT', 550);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'BBQ sås till pulled pork', 'Garant', 160, 1.1, 35, 0.4, 'SAUCE', 75);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Low Carb Bar - Jaffa Cake Flavor', 'OhYeah', 367, 36.7, 38.3, 1.7, 'BAR', 60);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Rotmos', 'Felix', 59, 1.2, 11, 0.5, 'OTHER', 500);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Shake Choco Banana', 'Naturdiet', 50, 4.3, 3.2, 1.3, 'SHAKE', 330);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Dammsugare', 'Delicato', 433, 59, 5, 20, 'SWEETS', 18);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodycombat', 800);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodypump', 600);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Zumba', 650);
