@@ -22,8 +22,13 @@
 
     <div class="pull-right">
         <g:if test="${session.user != null}">
-            ${session.user.kcalPerDay} kcal/dag&nbsp;
-            <g:link controller="login" action="logout">Logga ut ${session.user.name}</g:link>
+            <g:link controller="login" action="logout">
+                <button type="submit" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logga ut
+                </button>
+
+
+            </g:link>
         </g:if>
     </div>
 
