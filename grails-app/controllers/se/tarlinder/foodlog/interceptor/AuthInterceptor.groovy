@@ -13,7 +13,7 @@ class AuthInterceptor {
 
     boolean before() {
         if (!session.user) {
-            redirect(controller: 'login')
+            redirect(controller: 'login', params: [dest: session.request.forwardURI])
             return false
         }
         return true

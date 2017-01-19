@@ -21,6 +21,7 @@
 
                 <div class="panel panel-body">
                     <g:form controller="login" action="login">
+                        <g:hiddenField name="dest" value="${params.dest}"/>
                         <div class="form-group">
                             <label for="u">Användarnamn</label>
                             <input type="text" name="u" id="u" class="form-control">

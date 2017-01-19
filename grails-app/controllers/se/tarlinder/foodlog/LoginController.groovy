@@ -12,9 +12,13 @@ class LoginController {
         def user = User.findWhere(name: params.u, password: params.p)
         if (user) {
             session.user = user
-            redirect(controller: 'calendar', action: 'index')
+            if (params.dest) {
+                redirect(uri: params.dest)
+            } else {
+                redirect(controller: 'calendar')
+            }
         } else {
-            redirect(controller: 'login', action: 'index')
+            redirect(controller: 'login')
         }
     }
 
