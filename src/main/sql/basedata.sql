@@ -56,6 +56,7 @@ INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, ca
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Nutrilett meal - Crispy Chocolate', 'Nutrilett', 373, 28.4, 37.3, 11.4, 'BAR', 60);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Nutrilett - Hunger Control, Brownie Bar', 'Nutrilett', 390, 26.2, 44.2, 11.7, 'BAR', 60);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Swebar Protein/energy bar - Pepparkaka', 'Dalblads', 380, 32, 44, 8, 'BAR', 55);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Swebar Protein bar - Chocolate', 'Dalblads', 394, 30, 43, 11, 'BAR', 55);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Cookie Caramel Crunch', 'OhYeah!', 400, 33, 38, 15.3, 'BAR', 85);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, '54% protein bar', 'Maxim', 405, 53.6, 13.5, 15.8, 'BAR', 80);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Diet bar', 'Oxygen', 325, 38.3, 21.8, 5.3, 'BAR', 50);
@@ -196,6 +197,17 @@ INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, ca
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Dammsugare', 'Delicato', 433, 59, 5, 20, 'SWEETS', 18);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Kryddjärpar', 'Scan', 200, 12, 8, 14, 'MEAT', 300);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Chèvre', 'Livsmedelsverket', 345.5, 20.6, 1.4, 29, 'CHEESE', NULL);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Citronbitare', 'Findus', 240, 12, 22, 11, 'FISH', 370);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Torskfiskpinnar (1 pinne = 25g)', 'Findus', 210, 13, 18, 9, 'FISH', 400);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Kycklingburgare (1 buragare = 90g)', 'Eldorado', 250, 12, 20, 14, 'MEAT', 900);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Kyckling friterad', 'Livsmedelsverket', 310, 22.5, 5.8, 21.9, 'MEAT', NULL);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Glass noodles Vermicelli', 'Go Tan', 342, 81.3, 12, 0.2, 'PASTA', 100);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Kokospinnar (1 pinne = 20g)', 'Kvarnringen', 460, 3.2, 57.9, 24, 'SWEETS', 225);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, '40% Protein Bar', 'Maxim', 357, 40, 24, 13, 'BAR', 50);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Biff nöt stekt', 'Livsmedelsverket', 143.2, 25.46, 0, 4.5, 'MEAT', NULL);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Potatis råstekt', 'Livsmedelsverket', 139.3, 2.2, 20.6, 4.6, 'GREENS', NULL);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Ärter med fläsk', 'Felix', 107, 7.1, 12, 2.8, 'GREENS', 500);
+INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Sockerkaka fin', 'Livsmedelsverket', 398.6, 4.8, 48.5, 20.4, 'PASTRY', NULL);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodycombat', 800);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Bodypump', 600);
 INSERT INTO workout_type (id, version, name, average_kcal) VALUES(nextval('workout_id_seq'), 0, 'Zumba', 650);
