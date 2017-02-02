@@ -20,7 +20,7 @@
     </style>
 
     <script>
-        var updatePortionSize = function() {
+        var updatePortionSize = function () {
             var pattern = /^.*\((\d+)g\)\s*$/;
             var match = pattern.exec($("select option:selected").text());
             if (match != null) {
@@ -54,7 +54,8 @@
 
     <div class="input-group bottom10">
         <label class="sr-only" for="portionSize">Portionsstorlek</label>
-        <input type="text" id="portionSize" name="portionSize" value="100" class="form-control" aria-describedby="gram-addon">
+        <input type="text" id="portionSize" name="portionSize" value="100" class="form-control"
+               aria-describedby="gram-addon">
         <span class="input-group-addon" id="gram-addon">g</span>
     </div>
 
@@ -82,7 +83,8 @@
             <td>${String.format("%.1f", (meal.portionInGrams / 100 * meal.food.protein))}</td>
             <td>${String.format("%.1f", (meal.portionInGrams / 100 * meal.food.carbohydrate))}</td>
             <td>${String.format("%.1f", (meal.portionInGrams / 100 * meal.food.fat))}</td>
-            <td><g:link controller="day" action="delete" id="${meal.id}" params="[date: day.date]"><span class="glyphicon glyphicon-trash"></span></g:link></td>
+            <td><g:link controller="day" action="delete" id="${meal.id}" params="[date: day.date]"><span
+                    class="glyphicon glyphicon-trash"></span></g:link></td>
         </tr>
     </g:each>
     </tbody>
@@ -99,5 +101,13 @@
     </tr>
     </tfoot>
 </table>
+
+<div class="pull-right">
+    <g:link class="label label-info" controller="training"
+            params="[date: day.date]">Träning</g:link>
+    <g:link class="label label-warning" controller="datapoint"
+            params="[date: day.date]">Data</g:link>
+</div>
+
 </body>
 </html>
