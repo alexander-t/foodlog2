@@ -3,9 +3,12 @@ package se.tarlinder.foodlog
 import se.tarlinder.foodlog.domain.Day
 import se.tarlinder.foodlog.domain.Food
 import se.tarlinder.foodlog.domain.Meal
+import se.tarlinder.foodlog.service.MealService
 import se.tarlinder.foodlog.util.TimeUtil
 
 class DayController {
+
+    MealService mealService
 
     def index() {
         final date = TimeUtil.parseStandardDate(params.date)
@@ -27,7 +30,7 @@ class DayController {
             day = new Day(date, session.user)
             day.save(flush: true, failOnError: true)
         }
-        addMeal(day, Food.get(params.foodId), Long.parseLong(params.portionSize))
+        mealService.addMeal(day, Food.get(params.foodId), Long.parseLong(params.portionSize))
         render(view: "index", model: [day: day, food: Food.all.sort()])
     }
 
@@ -45,14 +48,5 @@ class DayController {
             day.delete(flush: true)
         }
         redirect(action: "index", params: params)
-    }
-
-    private addMeal(Day day, Food food, long portionInGrams) {
-        def meal = new Meal();
-        meal.day = day;
-        meal.food = food;
-        meal.portionInGrams = portionInGrams
-        meal.save(flush: true, failOnError: true)
-        day.refresh()
     }
 }
