@@ -26,11 +26,11 @@ class Food implements Comparable <Food> {
         id generator:'sequence', params:[sequence:'food_id_seq']
     }
 
-    def getBrandOrEmptyString() {
+    String getBrandOrEmptyString() {
         brand != null && !brand.equals("") ? "(" + brand + ")" : ""
     }
 
-    def getNameWithPortionSize() {
+    String getNameWithPortionSize() {
         name + ((packSizeInGrams != null) ? " (" + packSizeInGrams + "g)" : "")
     }
 
