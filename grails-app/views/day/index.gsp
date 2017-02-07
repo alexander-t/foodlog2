@@ -21,7 +21,7 @@
 
     <script>
         var updatePortionSize = function () {
-            var pattern = /^.*\((\d+)g\)\s*$/;
+            var pattern = /^.*\((\d+)g.*$/;
             var match = pattern.exec($("select option:selected").text());
             if (match != null) {
                 $("#portionSize").val(match[1]);
@@ -49,7 +49,7 @@
     <div class="form-group">
         <label class="sr-only" for="foodId">Mat</label>
         <g:select class="form-control bottom10" id="foodId" name="foodId" from="${food}" optionKey="id"
-                  optionValue="${{ it.getNameWithPortionSize() }}"/>
+                  optionValue="${{ it.getPresentableName( )}}"/>
     </div>
 
     <div class="input-group bottom10">

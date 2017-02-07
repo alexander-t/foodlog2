@@ -34,8 +34,17 @@ class Food implements Comparable <Food> {
         brand != null && !brand.equals("") ? "(" + brand + ")" : ""
     }
 
-    String getNameWithPortionSize() {
-        name + ((packSizeInGrams != null) ? " (" + packSizeInGrams + "g)" : "")
+    String getPresentableName() {
+        def presentable = name
+
+        if (unitWeight != null && unitLabel != null) {
+            presentable += " (" + unitWeight + "g/" + unitLabel + ")"
+        } else {
+            if (packSizeInGrams != null) {
+                presentable += " (" + packSizeInGrams + "g)"
+            }
+        }
+        return presentable
     }
 
     @Override
