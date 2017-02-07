@@ -10,6 +10,8 @@ class Food implements Comparable <Food> {
     float fat
     String category
     Long packSizeInGrams
+    Integer unitWeight
+    String unitLabel
 
     static constraints = {
         name blank: false, nullable: false
@@ -18,8 +20,10 @@ class Food implements Comparable <Food> {
         protein nullable: false, min: 0.0f
         carbohydrate nullable: false, min: 0.0f
         fat nullable: false, min: 0.0f
-        category inList: ["GREENS", "DAIRY", "MEAT", "POWDER", "BAR", "SOUP", "SWEETS", "BREAD", "OTHER", "DISH"]
+        category nullable: false
         packSizeInGrams nullable: true
+        unitWeight nullable: true
+        unitLabel nullable: true
     }
 
     static mapping = {
