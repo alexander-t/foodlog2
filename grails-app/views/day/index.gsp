@@ -104,7 +104,7 @@
 
 <div class="pull-right">
     <g:link class="label label-info" controller="training"
-            params="[date: day.date]">Träning</g:link>
+            params="[date: day.date]">Träning</g:link>&nbsp;
     <g:link class="label label-warning" controller="datapoint"
             params="[date: day.date]">Data</g:link>
 </div>
