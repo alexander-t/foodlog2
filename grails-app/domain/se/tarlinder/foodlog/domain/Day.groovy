@@ -13,6 +13,9 @@ class Day {
         id nullable: false
         date size: 8..8, nullable: false, unique: 'user'
     }
+    static mapping = {
+        id generator:'sequence', params:[sequence:'day_id_seq']
+    }
 
     Day(String date, User user) {
         this.date = date

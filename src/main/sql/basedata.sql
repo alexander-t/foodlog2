@@ -4,6 +4,9 @@ CREATE SEQUENCE food_id_seq;
 DROP SEQUENCE IF EXISTS workout_id_seq;
 CREATE SEQUENCE workout_id_seq;
 
+DROP SEQUENCE IF EXISTS day_id_seq;
+CREATE SEQUENCE day_id_seq;
+
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Lättmjölk', NULL, 39, 5, 3.5, 0.5, 'DAIRY', NULL);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Mellanmjölk', NULL, 47, 3.4, 5, 1.5, 'DAIRY', NULL);
 INSERT INTO food (id, version, name, brand, kcal, protein, carbohydrate, fat, category, pack_size_in_grams) VALUES(nextval('food_id_seq'), 0, 'Mellanfil', NULL, 45, 3.5, 3.8, 1.5, 'DAIRY', NULL);
